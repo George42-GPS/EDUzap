@@ -35,7 +35,7 @@ export default async function handler(req, res) {
 
     const hStr = new Date().toLocaleString('pt-BR',{ timeZone:'America/Sao_Paulo', hour:'2-digit', hour12:false });
     const hour = parseInt(hStr,10);
-    const withinHours = (hour>=7 && hour<8) || (hour>=17 && hour<19);
+    const withinHours =true; // TEMPORAIRE pour tester l'IA tout de suite;
     const blocked = ['futebol','jogo','aposta','namoro','celebridade','fofoca'];
     const isBlocked = blocked.some(k => incoming.toLowerCase().includes(k));
 
